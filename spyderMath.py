@@ -1,17 +1,15 @@
 #! python3
-# TestPatternMakerX.py
+# spyderMath.py
 
-# A script for calculating Spyder position (1 indexed) on pythonista on iPhone
-# Built for python 3.6
+"""A script for calculating keyframe position in Christie Spyder (1 indexed). 
+This script is built for pythonista on iPhone, which runs python 3.6."""
 
-# Check system version (just because)
-# import sys
-# print(sys.version + '\n')
 
-# Spyder numbers key
-# 0 = center
-# 1 = moves to the right (left edge at center of pixelspace)
-# -1 = moves to the left (right edge at center of pixelspace)
+""" Spyder numbers key:
+0 = center
+1 = moves to the right (left edge at center of pixelspace)
+-1 = moves to the left (right edge at center of pixelspace)
+"""
 
 
 def keyFrel1(keyFwidth, pSpaceWidth):
@@ -56,5 +54,3 @@ print(f'Spyder Absolute X if keyframe centered (Left edge of frame) = {lft}')
 absX = round(int_input_validation('What is your desired absolute X position? '))
 spyX = spyXfinder(keyFwidth, pSpaceWidth, absX)
 print(f'The Spyder X position value you desire is: {spyX}')
-
-
